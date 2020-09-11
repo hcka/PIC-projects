@@ -1,0 +1,11 @@
+sende proteus 8 kurulu idi. bunun çalışması gerekir ama eğer çalılşmazsa kendi bilgisayarında
+sim isimli resimdeki gibi kur. pic ve ekranın pinlerine bağlı olan üçgen şeyler terminal.
+power ve ground u aldığın yerden onları input ve output ismiyle bulabilirsin. program şu şekilde çalışır:
+
+ilk başta program seçersin. beyaz sent. veya yünlü. sonra sıcaklık ayarı sorar. beyaz a basarak s
+sıcaklığı artırır, beyazın altındakine basarak azaltırsın. onaya basarsın ve bekleme süresi
+sorar.yine beyaza basarak dk cisinden süreyi artırır, beyazın altındakine basarak azaltırsın.
+bu ayarlardan sonra onaya basarsan ayara göre ya yıkama programı başlar ya da ne kadar süre 
+sonra yıkamanın başlayacağı yazar. yıkama esnasında onaya basarsan durur 10 sn sonra kapak açma 
+pini (d0) bir olur. en alttaki anahtar hızlı program. yıkama başlamadan ne zaman basarsan bas 
+süreyi yarıya indirir. detaylar çarşamba...

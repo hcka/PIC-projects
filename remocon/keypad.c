@@ -1,0 +1,29 @@
+#include <18F4550.h>
+#fuses HSPLL,NOWDT,NOPROTECT,NOLVP,NODEBUG,USBDIV,PLL5,CPUDIV1,VREGEN
+#use delay(clock=48000000)
+
+#include <usb_cdc.h>
+#include <flex_keypad.c>
+#include <tmr_int.c>
+
+void main() 
+{ 
+   char k;
+   kbd_init();
+   usb_cdc_init();
+   usb_init();
+   setup_timer_0(rtcc_internal | rtcc_div_8);
+   set_timer0(26474);
+   enable_interrupts(int_timer0);
+   enable_interrupts(global);
+   while(!usb_cdc_connected()) {}
+   while(TRUE) 
+   { 
+   k=kbd_getc(); 
+   if(k!=0) 
+      { 
+         delay_ms(30);
+         printf(usb_cdc_putc,"\nBAMA%cRC",k);
+      } 
+   } 
+}
